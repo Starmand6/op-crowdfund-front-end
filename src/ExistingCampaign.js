@@ -1,5 +1,5 @@
 export default function ExistingCampaign({
-    currentCampaignID,
+    campaignID,
     title,
     creator,
     target,
@@ -20,7 +20,7 @@ export default function ExistingCampaign({
             <ul className="fields">
                 <li>
                     <div> Campaign ID: </div>
-                    <div> {currentCampaignID} </div>
+                    <div> {campaignID} </div>
                 </li>
                 <li>
                     <div> Campaign Title: </div>
@@ -63,12 +63,12 @@ export default function ExistingCampaign({
                     <div> {creatorHasWithdrawn} </div>
                 </li>
                 <label>
-                    Pledge amount (in TXDC):
+                    Pledge amount (in ETH):
                     <input type="text" id="pledge-amount" />
                 </label>
                 <div
                     className="button"
-                    id={currentCampaignID}
+                    id={campaignID}
                     onClick={(e) => {
                         e.preventDefault();
                         handlePledge();
@@ -82,7 +82,7 @@ export default function ExistingCampaign({
                 </div>
                 <div
                     className="button"
-                    id={currentCampaignID}
+                    id={campaignID}
                     onClick={(e) => {
                         e.preventDefault();
                         handleWithdrawRefund();
@@ -96,7 +96,7 @@ export default function ExistingCampaign({
                 </div>
                 <div
                     className="button"
-                    id={currentCampaignID}
+                    id={campaignID}
                     onClick={(e) => {
                         e.preventDefault();
                         handleClaimTokens();
@@ -114,7 +114,7 @@ export default function ExistingCampaign({
                 </label>
                 <div
                     className="button"
-                    id={currentCampaignID}
+                    id={campaignID}
                     onClick={(e) => {
                         e.preventDefault();
                         handleCreatorWithdrawal();
